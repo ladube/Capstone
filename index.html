@@ -50,7 +50,7 @@
 	<p>Going back to a simple Diffuse material, I have chosen a new real-environment image to demostrate how to implement shadows from your 3D objects. Begin by importing the real-environment image as a plane like before. Place the lights and 3D object where you'd like. Now, create a plane underneath your object. I tilted my plane towards the camera similarly to the real-environment image's hallway perspective. Now here's the trick. In the Blender Renderer, assign the plane a new material. Scroll down to the Shadow section and check "Shadows Only". Next scroll back up to the Transparency section and make sure that is checked too. Now the entire plane will appear invisible except for the shadows casted by your 3D object!</p>
 </div>
 </br>
-	<img src="Cube4.PNG" alt="image" class="center"/>S
+	<img src="Cube4.PNG" alt="image" class="center"/>
 </br>
 	<p class="center">[Below you can see two shadows, caused by the two primary lightsources. The lightsource reference from this real-environment image is much more complex than the previous example. These primary light sources mimic the lights from the cieling, but there are several other lights that are present to mimic the secondary lightsources. For simplicity, these secondary light sources are not casting shadows.]</p>
 </br>
@@ -100,7 +100,7 @@
 	<p>There are also some extra steps in order to import your video as a video plane. Import it first as an image plane, choosing Shadeless or Diffuse depending on what you plan to use. Now in the material tab, go to the Surface section where it has your Image Texture. The texture is the real-environment video you imported, but it is stuck on the first frame. Change Single Image to Movie and increase the number of Frames to as many as your original video needs. It may still appear that your image plane is stuck on a single frame, but trust me, it isn't. However, this is tricky because it will not show the movie playing if you just run the animation. So you need to enter render preview mode and selectively match the animations of your 3D object to the movement of your real-environment video.</p>
 </div>
 </br>
-	<img src="Cat2.png" alt="image" class="center"/>
+	<img src="Cat2.PNG" alt="image" class="center"/>
 </br>
 	<p class="center">[The trick to getting your emitter object to go behind an object from your real-environment video is to copy the video plane, and in Edit Mode use the 'k' hotkey to trace out the object you want to select. Delete the other faces and bring that cut video plane ever so slightly forward so that your emitter object can pass behind it.]</p>
 </br>

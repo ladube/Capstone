@@ -1,0 +1,50 @@
+body{
+	background-color: GhostWhite;
+}
+h1{
+	color: SteelBlue;
+	text-align: center;
+	font-family: courier new;
+}
+h2{
+	color: LightSlateGray;
+	text-align: center;
+	font-family: Lucida Console;
+}
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:40%;
+}
+video{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:40%;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.shelf{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+p{
+	color: MidnightBlue;
+	margin-left: 80px;
+	margin-right: 80px;
+	line-height: 1.6;
+}
+div{
+	text-indent:30px;
+}
+hr{
+	border-top: 1px solid MidnightBlue;
+}

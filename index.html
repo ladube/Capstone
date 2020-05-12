@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animating in Reality</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Integrating 3D Models and Animation into Real-Environment Images and Videos</h1>
+	<h2>Capstone Project by Lauren Dube</h2>
+
+	<video controls>
+  		<source src="ARKitty.mp4" type="video/mp4">
+  	</video>
+<div>
+	<p>I began this project in Blender 3D software because it seemed the most capable of realistic rendering, including a camera tracking feature. Ultimately, I did not get to the point where I used the camera tracking, but I was grateful for the opportunity to teach myself another 3D creation software. I spent a lot of time adjusting from Maya 3D software and getting comfortable with Blender's interface. By the middle of the semester, I was capable of creating a basic Blender 3D modeling and animation tutorial for the Deason Innovation Gym.</p>
+</div>
+
+</br>
+	<iframe class="center" src="https://www.youtube.com/embed/9AAxPiiQcnU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</br>
+<div>
+	<p>I believe being able to teach a subject to others greatly reinforces one's own knowledge of that subject. I personally learned a lot while I was the teaching assistant for the Intro to Maya 3D Modeling and Animation course. Since this capstone project was a learning experience for me, I wanted the end product to be a learning experience for others. Therefore, the culmination of my undergraduate education is an educative report of my favorite subject. I have documented my process and findings from experimenting with implementing 3D models and animation in real-environment images and video.</p>
+	</div>
+	<hr>
+</br>
+	
+<div>
+	<p>
+		Choosing your real-environment media will determine the difficulty of the task at hand. The number and direction of light sources, surfaces and reflections, and camera movement are things to examine. For example, I started with a still image facing towards the cieling where there was a prominent light source in one direction. This perspective made it so that I could not see the floor or other surfaces that a 3D object would cast a shadow upon. I also chose an image with a strong backlight. Almost always you will need to include secondary smaller lights, but having a strong primary light mitigates how meticulous you need to be in the placement of your secondary lights. 
+	</p>
+	<p>
+		Another thing that effects how difficult this process will be is the material of your 3D object. If you make your image out of a glass material, you have to worry about reflections and refractions. Consider starting with a simple Diffuse material to get comfortable with the proecess of implementing your 3D objects into real-environment images. Start by importing your real-environment image as a plane, setting it to Shadeless before you import it. Make sure the plane is in full view of the camera and move the default point light to mimic where the real-environment image has its light source. Add whatever 3D objects you like. In this case, I used several torus objects to demonstrate material. 
+	</p>
+</div>
+
+</br>
+	<img src="Rings1.png" alt="image" class="center"/>
+</br>
+	<p class="center">[I put the primary light behind the torus objects to mimic the placement of the lights in the real-environment image. However, the effectiveness of this light changes when I change the objects' material.]</p>
+</br>
+	<img src="Rings3.png" alt="image" class="center"/>
+</br>
+	<p class="center">[You can see that using a Glass material rather than a Diffuse material changes how the lights interact with the material and therefore changes the entire lighting situation. Below, I have a different material type for each torus object so you can see just how much the lighting changes for each material.]</p>
+</br>
+	<img src="Rings2.png" alt="image" class="center"/>
+</br>
+
+
+<div>
+	<p>Going back to a simple Diffuse material, I have chosen a new real-environment image to demostrate how to implement shadows from your 3D objects. Begin by importing the real-environment image as a plane like before. Place the lights and 3D object where you'd like. Now, create a plane underneath your object. I tilted my plane towards the camera similarly to the real-environment image's hallway perspective. Now here's the trick. In the Blender Renderer, assign the plane a new material. Scroll down to the Shadow section and check "Shadows Only". Next scroll back up to the Transparency section and make sure that is checked too. Now the entire plane will appear invisible except for the shadows casted by your 3D object!</p>
+</div>
+</br>
+	<img src="Cube4.png" alt="image" class="center"/>
+</br>
+	<p class="center">[Below you can see two shadows, caused by the two primary lightsources. The lightsource reference from this real-environment image is much more complex than the previous example. These primary light sources mimic the lights from the cieling, but there are several other lights that are present to mimic the secondary lightsources. For simplicity, these secondary light sources are not casting shadows.]</p>
+</br>
+	<img src="Cube1.png" alt="image" class="center"/>
+</br>
+	<p class="center">[By placing the primary lights closer together, you make the shadows overlap more. This is important because as the cube moves closer to the lights, the relative angles of the lights will change and the shadows will move apart again.]</p>
+</br>
+	<img src="Cube3.png" alt="image" class="center"/>
+</br>
+	<p class="center">[If the shadow seems too dark and unnatural, you can lighten it by decreasing the alpha of the shadow plane. This is especially helpful where the overlapping shadows become much harsher, and is typically easier than manually adjusting the strengths of your lights.]</p>
+</br>
+	<img src="Cube2.png" alt="image" class="center"/>
+</br>
+	<p class="center">[This technique is most useful because as your animated object changes, the shadows change accordingly with no extra effort!]</p>
+<video controls>
+  		<source src="Cube.mp4" type="video/mp4">
+  	</video>
+
+<div>
+	<p>This next example is a little more complicated. We are no longer just dealing with the shadows being cast onto the floor. There are other objects in the real-environment image that would be impacted by the shadows from the 3D object. This can be treated very similarly to the previous example. Create the same shadow plane, but this time, extrude it at the point where the real-environment image has an interfering object. This casts the shadows on the plane at an angle that looks like it is interacting with different surfaces. If the surface you want to cast a shadow upon in the real-environment image has a texture, you can manipulate the surface of the shadow plane or add a displacement map to it in order to mimic the intricacies of shadows upon the surface.</p>
+	<p> Another difference in this example is that we will be experimenting more with lights. This single scene has 8 lights in it! Most of them are subtle secondary lights to attempt to make it look more realistic. There are other ways to do that too by playing with the different types of lights. Each light has it's own advantages and disadvantages. There is no single light that matches any real-environment scenario perfectly realistically every time, trust me, I tried! So experiment adjusting the lights to get a softer or harsher shadow when needed.</p>
+</div>
+</br>
+	<img src="Vase1.png" alt="image" class="shelf"/>
+</br>
+	<p class="center">[Below is an example of the extruded plane. This covers a picture frame that would have a shadow over it if the 3D object were real.]</p>
+</br>
+	<img src="Vase2.png" alt="image" class="center"/>
+</br>
+	<p class="center">[Notice how sharp that shadow is. In the real-environment image, the shadows aren't so harsh. This shadow was the result of using a single primary point light.]</p>
+</br>
+	<img src="Vase4.png" alt="image" class="center"/>
+</br>
+	<p class="center">[This shadow appears layered, which softens it out. This is possible by splitting the original primary point light into multiple less powerful lights spaced slightly apart.]</p>
+</br>
+	<img src="Vase3.png" alt="image" class="center"/>
+</br>
+	<p class="center">[This last image has a very natural shadow and is made by using an area light with a short distance. The issue with this light is that it highlights the facets in the 3D mesh and does not calculate the object's smoothness like the point lights do.]</p>
+</br>
+	<img src="Vase5.png" alt="image" class="center"/>
+</br>
+
+
+
+<div>
+	<p>The easiest method to work with is using emission materials in the Cycles Renderer. This creates an object that glows so you do not have to deal with meticulously placing lights to cast the right shadows upon the object. To do this, you need to start a little differently. When importing the real-environment image as a plane, set your image plane to Diffuse rather than Shadeless or Emission. This allows your emission object to cast light upon it if it is close enough. However, this also means it needs its own lighting, often a simple point light to illuminate the entire image. This can sometimes give a vignette effect or if your image/video is already too dark, it is hard to get it bright enough without looking washed out.</p>
+	<p>There are also some extra steps in order to import your video as a video plane. Import it first as an image plane, choosing Shadeless or Diffuse depending on what you plan to use. Now in the material tab, go to the Surface section where it has your Image Texture. The texture is the real-environment video you imported, but it is stuck on the first frame. Change Single Image to Movie and increase the number of Frames to as many as your original video needs. It may still appear that your image plane is stuck on a single frame, but trust me, it isn't. However, this is tricky because it will not show the movie playing if you just run the animation. So you need to enter render preview mode and selectively match the animations of your 3D object to the movement of your real-environment video.</p>
+</div>
+</br>
+	<img src="Cat2.png" alt="image" class="center"/>
+</br>
+	<p class="center">[The trick to getting your emitter object to go behind an object from your real-environment video is to copy the video plane, and in Edit Mode use the 'k' hotkey to trace out the object you want to select. Delete the other faces and bring that cut video plane ever so slightly forward so that your emitter object can pass behind it.]</p>
+</br>
+	<img src="Cat0.png" alt="image" class="center"/>
+</br>
+	<p class="center">[Even using an object with the emit material, you need to consider where that light could be reflected. Much like you need to consider an object casting a shadow, you need to think of how the emitter is casting light.]</p>
+</br>
+	<img src="Cat1.png" alt="image" class="center"/>
+</br>
+
+<div>
+	<p>Altogether, these tips should allow you to integrate your own 3D objects and animations into real-environment images and videos. It is meticulous work, but very fulfilling. The next step is to use a real-environment video that has a moving camera perspective and use Blender's camera tracking feature. Keep experimenting and exploring!</p>
+	</div>
+
+</body>
+</html>

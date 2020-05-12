@@ -50,7 +50,7 @@
 	<p>Going back to a simple Diffuse material, I have chosen a new real-environment image to demostrate how to implement shadows from your 3D objects. Begin by importing the real-environment image as a plane like before. Place the lights and 3D object where you'd like. Now, create a plane underneath your object. I tilted my plane towards the camera similarly to the real-environment image's hallway perspective. Now here's the trick. In the Blender Renderer, assign the plane a new material. Scroll down to the Shadow section and check "Shadows Only". Next scroll back up to the Transparency section and make sure that is checked too. Now the entire plane will appear invisible except for the shadows casted by your 3D object!</p>
 </div>
 </br>
-	<img src="Cube4.png" alt="image" class="center"/>
+	<img src="Cube4.PNG" alt="image" class="center"/>S
 </br>
 	<p class="center">[Below you can see two shadows, caused by the two primary lightsources. The lightsource reference from this real-environment image is much more complex than the previous example. These primary light sources mimic the lights from the cieling, but there are several other lights that are present to mimic the secondary lightsources. For simplicity, these secondary light sources are not casting shadows.]</p>
 </br>
@@ -78,15 +78,15 @@
 </br>
 	<p class="center">[Below is an example of the extruded plane. This covers a picture frame that would have a shadow over it if the 3D object were real.]</p>
 </br>
-	<img src="Vase2.png" alt="image" class="center"/>
+	<img src="Vase2.PNG" alt="image" class="center"/>
 </br>
 	<p class="center">[Notice how sharp that shadow is. In the real-environment image, the shadows aren't so harsh. This shadow was the result of using a single primary point light.]</p>
 </br>
-	<img src="Vase4.png" alt="image" class="center"/>
+	<img src="Vase4.PNG" alt="image" class="center"/>
 </br>
 	<p class="center">[This shadow appears layered, which softens it out. This is possible by splitting the original primary point light into multiple less powerful lights spaced slightly apart.]</p>
 </br>
-	<img src="Vase3.png" alt="image" class="center"/>
+	<img src="Vase3.PNG" alt="image" class="center"/>
 </br>
 	<p class="center">[This last image has a very natural shadow and is made by using an area light with a short distance. The issue with this light is that it highlights the facets in the 3D mesh and does not calculate the object's smoothness like the point lights do.]</p>
 </br>
